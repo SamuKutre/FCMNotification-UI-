@@ -1,5 +1,9 @@
-importScripts('https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/9.6.1/firebase-messaging.js');
+// importScripts('https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js');
+// importScripts('https://www.gstatic.com/firebasejs/9.6.1/firebase-messaging.js');
+
+importScripts('https://www.gstatic.com/firebasejs/latest/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/latest/firebase-messaging.js');
+
 
 // Initialize the Firebase app in the service worker
 firebase.initializeApp({
