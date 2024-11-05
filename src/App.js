@@ -13,7 +13,7 @@ class App extends Component {
       const permission = await Notification.requestPermission();
       if (permission === "granted") {
         const token = await getToken(messaging, {
-          vapidKey: 'BKwN7g80MEbC4Dq7h_uqe54316AFZKj6GOKZwI8jOxMPkdc9GpOslXrB0hae5GHcjJZksW9SaKVLUgEVG2G2v_c'
+          vapidKey: 'BKwN7g80MEbC4Dq7h_uqe54316AFZKj6GOKZwI8jOxMPkdc9GpOslXrB0hae5GHcjJZksW9SaKVLUgEVG2G2v_c' // Your VAPID key here
         });
         console.log("FCM Token:", token);
         this.sendTokenToServer(token);
@@ -76,4 +76,3 @@ class App extends Component {
 }
 
 export default App;
-
