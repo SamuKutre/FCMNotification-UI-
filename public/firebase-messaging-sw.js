@@ -23,10 +23,16 @@ const messaging = firebase.messaging();
 // Handle background messages
 messaging.onBackgroundMessage(function(payload) {
   console.log('Received background message: ', payload);
-  const notificationTitle = payload.notification.title;
+  // const notificationTitle = payload.notification.title;
+  // const notificationOptions = {
+  //   body: payload.notification.body,
+  //   icon: '/firebase-logo.png'
+  // };
+  // Make sure the payload contains the expected notification object
+  const notificationTitle = payload.notification ? payload.notification.title : 'Default Title';
   const notificationOptions = {
-    body: payload.notification.body,
-    icon: '/firebase-logo.png'
+    body: payload.notification ? payload.notification.body : 'No body content',
+    icon: '/firebase-logo.png', // Adjust the icon path if necessary
   };
 
   self.registration.showNotification(notificationTitle, notificationOptions);
