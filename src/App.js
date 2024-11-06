@@ -36,7 +36,7 @@ class App extends Component {
 
   sendTokenToServer = async (token) => {
     try {
-      const response = await fetch("http://localhost:9090/api/send-notification", {
+      const response = await fetch("https://fcmnotificationbackend.onrender.com/api/send-notification", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
